@@ -14,6 +14,7 @@ const AddCustomerPage = () => {
         "employees": ""
     })
 
+    // function to handle text boxes, radio button etc
     const updateFormField = (event) => {
         setFormState({
             ...formState,
