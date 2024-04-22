@@ -78,7 +78,7 @@ const AddCustomerPage = () => {
                             parseInt(formState.rating),
                             formState.employees.split(",")
                         );
-                        navigate("/") 
+                        navigate("/"); 
                     }}
             >Create Customer</button>
         </>

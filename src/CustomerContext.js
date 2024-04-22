@@ -10,6 +10,7 @@ const BASE_API_URL = "https://3000-missycoder-05expressmys-2oo6mezb7lv.ws-us110.
 // create component that can inject the context data to its children
 export default function CustomerContextData(props) {
 
+    // `useEffect` hook calls function after component renders for 1st time
     useEffect(() => {
 
         const fetchData = async () => {
@@ -19,7 +20,7 @@ export default function CustomerContextData(props) {
 
         fetchData();
 
-    }, []) // if dependency array is empty, it means to call the effect function once and only once after the first render
+    }, []) // if dependency array is empty, it means to call the effect function once & only once after the first render
 
     // state data stored in `CustomerContext` data component above
     const [customers, setCustomers] = useState([]);
