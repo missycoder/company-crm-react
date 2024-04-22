@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { CustomerContext } from '../CustomerContext';
 
 const AddCustomerPage = () => {
-    // hooks must be used at the start of component and cannot be inside any if else
+    // hooks must be used at the start of component and cannot be inside loop, or if else
     const context = useContext(CustomerContext);
     const navigate = useNavigate();
     const [formState, setFormState] = useState({
