@@ -1,25 +1,28 @@
-import React, {useState, createContext, useEffect} from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
+// `CustomerContext`: component that allows to store data
+//  component to get customers and add customers
 export const CustomerContext = createContext();
-const BASE_API_URL = "https://3000-missycoder-companycrmre-zi3avt4zo1q.ws-us110.gitpod.io"
+const BASE_API_URL = "https://3000-missycoder-05expressmys-2oo6mezb7lv.ws-us110.gitpod.io"
 
 // create component that can inject the context data to its children
 export default function CustomerContextData(props) {
-    
+
     useEffect(() => {
-        
-        const fetchData = async() => {
+
+        const fetchData = async () => {
             const response = await axios.get(BASE_API_URL + "/api/customers");
             setCustomers(response.data.customers)
         }
 
         fetchData();
-        
-    }, []) // if dependeny array is empty, it means to call the effect function once and only once after the first render
+
+    }, []) // if dependency array is empty, it means to call the effect function once and only once after the first render
 
     const [customers, setCustomers] = useState([]);
 
+    // `dataOperations` object contains CRUD functions
     const dataOperations = {
         getCustomers: () => {
             return customers
@@ -76,6 +79,11 @@ export default function CustomerContextData(props) {
         }
     }
 
+    // JSX
+    //data stored in `CustomerContext` is in `const dataOperations` above
+    // `Provider`: any children component can access the `value`
+    // `props.children` refers to `app.js > `CustomerContextData` 
+    // inside `Routes`
     return (
         <CustomerContext.Provider value={dataOperations}>
             {props.children}

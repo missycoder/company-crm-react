@@ -2,6 +2,9 @@ import React, {useContext} from 'react';
 import { CustomerContext } from '../CustomerContext';
 import { useNavigate } from 'react-router-dom';
 
+// `useContext` will return `dataOperations` (in CustomerContext.js)
+// returned data saved to `context` objectm and able to 
+// call `context.getCustomers`
 const ListCustomerPage = () => {
     const context = useContext(CustomerContext);
     const navigate = useNavigate();
