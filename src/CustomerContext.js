@@ -13,6 +13,7 @@ export default function CustomerContextData(props) {
     // `useEffect` hook calls function after component renders for 1st time
     useEffect(() => {
 
+        // proxy function inside the `useEffect` function that is async
         const fetchData = async () => {
             const response = await axios.get(BASE_API_URL + "/api/customers");
             setCustomers(response.data.customers)
