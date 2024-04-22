@@ -43,7 +43,7 @@ export default function CustomerContextData(props) {
                 company_id: companyId,
                 rating: rating,
                 employees: employees
-            })
+            });
 
             const newCustomer = {
                 customer_id: response.data.new_customer_id,
