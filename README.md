@@ -12,7 +12,10 @@ This is a Customer Relationship Management (CRM) application for managing compan
 
 ![Add New Customer](https://github.com/missycoder/company-crm-react/assets/156276105/8e4c9841-cc8f-4b88-bf0c-4ab7456e3cd3)
 
-## CRM Screenshot
+## CRM Diagram
+![react_diagram](https://github.com/missycoder/company-crm-react/assets/156276105/3bf3df31-18ba-4a8b-b40b-25335a74cba8)
+
+## CRM SPA
 ![List Customers](https://github.com/missycoder/company-crm-react/assets/156276105/c69c0c51-ed3b-4b47-a652-bd8c35d89998)
 
 ## Installation
