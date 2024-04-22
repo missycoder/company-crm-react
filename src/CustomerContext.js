@@ -2,7 +2,7 @@ import React, {useState, createContext, useEffect} from 'react';
 import axios from 'axios';
 
 export const CustomerContext = createContext();
-const BASE_API_URL = "https://3000-missycoder-companycrma-u2d4p6k0z17.ws-us110.gitpod.io"
+const BASE_API_URL = "https://3000-missycoder-companycrmre-zi3avt4zo1q.ws-us110.gitpod.io"
 
 // create component that can inject the context data to its children
 export default function CustomerContextData(props) {
