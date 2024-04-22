@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { CustomerContext } from '../CustomerContext';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -16,23 +16,25 @@ const DeleteCustomerPage = () => {
         fetchCustomer();
     }, [context, customerId]);
 
+    const handleDelete = async () => {
+        await context.deleteCustomer(customerId);
+        navigate("/"); // Navigate back to the list of customers after deletion
+    };
+
     return (
         <>
-            <h1>Delete</h1>
+            <h1>Delete Customer</h1>
             {customer && (
                 <>
                     <div>Are you sure you want to delete {customer.first_name} {customer.last_name}?</div>
                     <div>
                         <button className="btn btn-secondary m-2" onClick={() => navigate("/")}>Cancel</button>
-                        <button className="btn btn-danger" onClick={() => {
-                                                            context.deleteCustomer(customerId);
-                                                            navigate("");
-                        }}>Comfirm</button>
+                        <button className="btn btn-danger" onClick={handleDelete}>Confirm</button>
                     </div>
                 </>
             )}
         </>
-    )
-}
+    );
+};
 
 export default DeleteCustomerPage;
