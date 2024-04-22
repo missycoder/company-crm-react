@@ -11,6 +11,8 @@ This is a Customer Relationship Management (CRM) application for managing compan
 - [D]elete: Delete existing customers.
 
 ## CRM Screenshot
+![List Customers](https://github.com/missycoder/company-crm-react/assets/156276105/c69c0c51-ed3b-4b47-a652-bd8c35d89998)
+
 
 ## Installation
 
