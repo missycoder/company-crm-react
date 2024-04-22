@@ -10,9 +10,10 @@ This is a Customer Relationship Management (CRM) application for managing compan
 - [U]pdate: Update customer information.
 - [D]elete: Delete existing customers.
 
+![Add New Customer](https://github.com/missycoder/company-crm-react/assets/156276105/8e4c9841-cc8f-4b88-bf0c-4ab7456e3cd3)
+
 ## CRM Screenshot
 ![List Customers](https://github.com/missycoder/company-crm-react/assets/156276105/c69c0c51-ed3b-4b47-a652-bd8c35d89998)
-
 
 ## Installation
 
