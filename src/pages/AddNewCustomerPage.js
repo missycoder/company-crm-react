@@ -17,7 +17,7 @@ const AddCustomerPage = () => {
     const updateFormField = (event) => {
         setFormState({
             ...formState,
-            [event.target.name] : event.target.value // if want value from javascript expression then use [] 
+            [event.target.name] : event.target.value // if want value from javascript expression then use `[]` 
         }) // clone then replace with the changed one
     }
 

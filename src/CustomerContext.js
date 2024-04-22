@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // `CustomerContext`: component that allows to store data
 //  component to get customers and add customers
+// 'context is like a `frontend db for react` (store 1 value)
 export const CustomerContext = createContext();
 const BASE_API_URL = "https://3000-missycoder-05expressmys-2oo6mezb7lv.ws-us110.gitpod.io"
 
@@ -20,6 +21,7 @@ export default function CustomerContextData(props) {
 
     }, []) // if dependency array is empty, it means to call the effect function once and only once after the first render
 
+    // state data stored in `CustomerContext` data component above
     const [customers, setCustomers] = useState([]);
 
     // `dataOperations` object contains CRUD functions
