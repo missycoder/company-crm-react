@@ -78,10 +78,21 @@ export default function CustomerContextData(props) {
             const modified = [...customers, newCustomer];
             setCustomers(modified)
         },
+        // Delete an existing customer
+        // `customers.filter` is used to create new array(modified)
+        // that excludes the deleted customer based on its ID
+        // aka local state reflect updated list of customers w/o the deleted one.
         deleteCustomer: async (customer_id) => {
-            const response = await axios.delete(BASE_API_URL + "/api/customers/" + customer_id);
+            try {
+                await axios.delete(BASE_API_URL + "/api/customers/" + customer_id);
+                const modified = customers.filter(customer => customer.customer_id !== customer_id);
+                setCustomers(modified); // to update the state
+            } catch (error) {
+                console.error("Error deleting customer:", error);
+            }
         }
-    }
+    };
+    
 
     // JSX
     //data stored in `CustomerContext` is in `const dataOperations` above
