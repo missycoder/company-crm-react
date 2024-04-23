@@ -18,13 +18,13 @@ const DeleteCustomerPage = () => {
 
     const handleDelete = async () => {
         await context.deleteCustomer(customerId);
-        navigate("/"); // Navigate back to the list of customers after deletion
+        navigate("/");
     };
 
     return (
         <>
             <h1>Delete Customer</h1>
-            {customer && (
+            {customer && ( // Checking if customer data exists before rendering
                 <>
                     <div>Are you sure you want to delete {customer.first_name} {customer.last_name}?</div>
                     <div>
